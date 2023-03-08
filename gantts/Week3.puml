@@ -1,0 +1,14 @@
+@startgantt
+
+Project starts 2023-02-15
+
+[Testing] starts 2023-02-15
+[Testing] lasts 23 days
+[Change Report] starts 2023-03-03
+[Change Report] lasts 7 days
+
+[Unit Testing] on {Emma:20%} {Isaac:20%} {Toby:20%} {Seungyoon:20%} {Isioma:20%} starts 2023-02-15 and ends 2023-03-09 and is colored in LightYellow/Maroon
+[Requirements] on {Emma:100%} starts 2023-03-03 and ends 2023-03-09 and is colored in LightGreen/DarkGreen
+[Risk Assessment] on {Emma:100%} starts 2023-03-03 and ends 2023-03-09 and is colored in LightGreen/DarkGreen
+
+@endgantt
