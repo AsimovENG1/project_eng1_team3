@@ -102,7 +102,7 @@ public class GameScreen implements Screen {
 	public static Control control;
 	TiledMapRenderer tiledMapRenderer;
 	public TiledMap map1;
-	public static Cook[] cooks = { new Cook(new Vector2(64 * 5, 64 * 3), 1), new Cook(new Vector2(64 * 5, 64 * 5), 2) };
+	public static Cook[] cooks = { new Cook(new Vector2(64 * 5, 64 * 3), 1), new Cook(new Vector2(64 * 5, 64 * 5), 2)  , new Cook(new Vector2(64 * 6, 64 * 6), 3) };
 	public static int currentCookIndex = 0;
 	public static Cook cook = cooks[currentCookIndex];
 	public static CustomerController cc;
@@ -292,7 +292,7 @@ public class GameScreen implements Screen {
     /**
      * Change selected cook
      */
-	private void checkCookSwitch() {
+	public static void checkCookSwitch() {
 		if (control.tab && Tutorial.complete) {
 			cook.locked = false;
 			currentCookIndex += currentCookIndex < cooks.length - 1 ? 1 : -currentCookIndex;
