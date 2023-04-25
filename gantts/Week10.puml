@@ -1,0 +1,56 @@
+@startgantt
+
+ Project starts 2023-02-15
+
+ [Testing] starts 2023-02-15
+ [Testing] lasts 71 days
+ [Continuous Integration] starts 2023-03-01
+ [Continuous Integration] lasts 42 days
+ [Change Report] starts 2023-03-03
+ [Change Report] lasts 55 days
+ [Implementation] starts 2023-03-16
+ [Implementation] lasts 42 days
+
+ [Unit Testing] on {Emma:20%} {Isaac:20%} {Toby:20%} {Seungyoon:20%} {Isioma:20%} starts 2023-02-15 and ends 2023-03-16 and is colored in LightYellow/Maroon
+ [Manual Testing] on {Emma:20%} {Isaac:20%} {Toby:20%} {Seungyoon:20%} {Isioma:20%} starts 2023-03-08 and ends 2023-03-16 and is colored in LightYellow/Maroon
+ [Write up Testing part a] on {Emma:100%} starts 2023-04-12 and ends 2023-04-17  and is colored in LightYellow/Maroon
+ [New code unit testing] on {Emma:100%} starts 2023-04-17 and ends 2023-04-23  and is colored in LightYellow/Maroon
+
+ [Requirements New File] on {Emma:100%} starts 2023-03-03 and ends 2023-03-21 and is colored in LightGreen/DarkGreen
+ [Requirements Write Up] on {Emma:100%} starts 2023-03-16 and ends 2023-03-21 and is colored in LightGreen/DarkGreen
+ [Risk Assessment New File] on {Emma:100%} starts 2023-03-03 and ends 2023-03-21 and is colored in LightGreen/DarkGreen
+ [Risk Assessment Write Up] on {Emma:100%} starts 2023-03-19 and ends 2023-03-21 and is colored in LightGreen/DarkGreen
+ [Proof read CR] on {Emma:100%} starts 2023-04-06 and ends 2023-04-11 and is colored in LightGreen/DarkGreen
+ [Architecture] on {Isioma:100%} starts 2023-03-16 and ends 2023-03-22 and is colored in LightGreen/DarkGreen
+ [Sequence Diagrams] on {Isioma:100%} starts 2023-03-16 and ends 2023-03-24 and is colored in LightGreen/DarkGreen
+ [Breakdown of Class Diagrams] on {Isioma:100%} starts 2023-03-25 and ends 2023-04-05 and is colored in LightGreen/DarkGreen
+ [Architecture Write Up] on {Isioma:100%} starts 2023-04-05 and ends 2023-04-12 and is colored in LightGreen/DarkGreen
+ [Method Selection and Planning New File] on {Isioma:100%} starts 2023-03-29 and ends 2023-04-12 and is colored in LightGreen/DarkGreen
+ [Method Selection and Planning Write Up] on {Isioma:100%} starts 2023-04-05 and ends 2023-04-12 and is colored in LightGreen/DarkGreen
+ [Part a] on {Isioma:100%} starts 2023-04-12 and ends 2023-04-19 and is colored in LightGreen/DarkGreen
+
+ [Set up CI] on {Toby:100%} starts 2023-03-01 and ends 2023-03-02 and is colored in LightBlue/DarkBlue
+ [Write up part b] on {Seungyoon:100%} starts 2023-03-08 and ends 2023-03-15 and is colored in LightBlue/DarkBlue
+ [Write up part a] on {Emma:100%} starts 2023-03-22 and ends 2023-03-24 and is colored in LightBlue/DarkBlue
+ [Take over write up part b] on {Emma:100%} starts 2023-03-25 and ends 2023-03-28 and is colored in LightBlue/DarkBlue
+ [Create release CI pipeline] on {Emma:100%} starts 2023-03-29 and ends 2023-03-31 and is colored in LightBlue/DarkBlue
+ [Update CI part a] on {Emma:100%} starts 2023-03-31 and ends 2023-04-05 and is colored in LightBlue/DarkBlue
+ [Update CI part b] on {Emma:100%} starts 2023-03-31 and ends 2023-04-05 and is colored in LightBlue/DarkBlue
+ [Proof read CI] on {Emma:100%} starts 2023-04-06 and ends 2023-04-11 and is colored in LightBlue/DarkBlue
+
+ [Set up game spec] on {Emma:100%} starts 2023-03-16 and ends 2023-03-16 and is colored in Pink/Salmon
+ [Fix Memory Leak] on {Toby:100%} starts 2023-03-16 and ends 2023-04-23 and is colored in Pink/Salmon
+ [Take over Memory Leak] on {Emma:100%} starts 2023-04-23 and ends 2023-04-25 and is colored in Pink/Salmon
+ [Move Tutorial] on {Toby:100%} starts 2023-03-22 and ends 2023-04-19 and is colored in Pink/Salmon
+ [Draw Sprites] on {Isaac:100%} starts 2023-03-16 and ends 2023-03-21 and is colored in Pink/Salmon
+ [Extra Chef] on {Seungyoon:100%} starts 2023-03-16 and ends 2023-03-21 and is colored in Pink/Salmon
+ [Customer Arrivals] on {Seungyoon:100%} starts 2023-03-22 and ends 2023-04-19 and is colored in Pink/Salmon
+ [Endless Mode Buttons] on {Isaac:100%} starts 2023-03-22 and ends 2023-03-26 and is colored in Pink/Salmon
+ [Difficulty Mode Buttons] on {Isaac:100%} starts 2023-03-22 and ends 2023-03-26 and is colored in Pink/Salmon
+ [New Ingredients] on {Isaac:100%} starts 2023-03-22 and ends 2023-03-28 and is colored in Pink/Salmon
+ [New Recipes] on {Isaac:100%} starts 2023-03-29 and ends 2023-04-19 and is colored in Pink/Salmon
+ [Powerups] on {Isaac:100%} starts 2023-03-29 and ends 2023-04-19 and is colored in Pink/Salmon
+ [New Ingredients Stations] on {Isaac:100%} starts 2023-03-29 and ends 2023-04-17 and is colored in Pink/Salmon
+ [Endless Mode] on {Toby:100%} starts 2023-04-07 and ends 2023-04-19 and is colored in Pink/Salmon
+ [Buy Back Station] on {Isaac:100%} starts 2023-04-18 and ends 2023-04-19 and is colored in Pink/Salmon
+ @endgantt
