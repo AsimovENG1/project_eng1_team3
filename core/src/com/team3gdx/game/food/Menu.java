@@ -53,8 +53,8 @@ public class Menu {
 				"serve together", "burger_burned",  null, 32, 32, 20));
 		RECIPES.put("Salad", new Recipe("", null, SALAD_STEPS, "serve together", "salad", null, 32, 32, 20));
 		RECIPES.put("Jacket_potato", new Recipe("cook_potato", Ingredients.potato, JACKET_POTATO_STEPS, "serve together",
-				"Jacket_potato", null, 32, 32, 20));
-		RECIPES.put("Pizza",new Recipe("Form dough", Ingredients.unformedDough, PIZZA_STEPS,"serve together", "Pizza", null, 32, 32, 20));
+				"jacket_potato", null, 32, 32, 20));
+		RECIPES.put("Pizza",new Recipe("Form dough", Ingredients.unformedDough, PIZZA_STEPS,"serve together", "pizza", null, 32, 32, 20));
 	}
 
 	/**

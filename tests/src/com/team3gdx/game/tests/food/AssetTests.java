@@ -60,25 +60,25 @@ public class AssetTests {
 
     @Test
     public void testPotatoAssetExists(){
-        assertTrue(Gdx.files.internal("items/Cheese.png").exists());
-        assertTrue(Gdx.files.internal("items/Jacket_potato.png").exists());
+        assertTrue(Gdx.files.internal("items/cheese.png").exists());
+        assertTrue(Gdx.files.internal("items/jacket_potato.png").exists());
         assertTrue(Gdx.files.internal("items/potato_cooked.png").exists());
         assertTrue(Gdx.files.internal("items/potato_cooked_chopped.png").exists());
         assertTrue(Gdx.files.internal("items/potato_chopped.png").exists());
         assertTrue(Gdx.files.internal("items/cheese_chopped.png").exists());
         assertTrue(Gdx.files.internal("items/cheese_mushy.png").exists());
-        assertTrue(Gdx.files.internal("items/Potato.png").exists());
+        assertTrue(Gdx.files.internal("items/potato.png").exists());
         assertTrue(Gdx.files.internal("items/potato_burned.png").exists());
-        assertTrue(Gdx.files.internal("items/Potato_mushy.png").exists());
+        assertTrue(Gdx.files.internal("items/potato_mushy.png").exists());
     }
 
     @Test
     public void testPizzaAssetExists() {
-        assertTrue(Gdx.files.internal("items/Dough.png").exists());
-        assertTrue(Gdx.files.internal("items/Dough_burned.png").exists());
-        assertTrue(Gdx.files.internal("items/Dough_cooked.png").exists());
-        assertTrue(Gdx.files.internal("items/Raw_pizza.png").exists());
+        assertTrue(Gdx.files.internal("items/dough.png").exists());
+        assertTrue(Gdx.files.internal("items/dough_burned.png").exists());
+        assertTrue(Gdx.files.internal("items/dough_cooked.png").exists());
+        assertTrue(Gdx.files.internal("items/raw_pizza.png").exists());
         assertTrue(Gdx.files.internal("items/unformed_dough.png").exists());
-        assertTrue(Gdx.files.internal("items/Tomato_sauce.png").exists());
+        assertTrue(Gdx.files.internal("items/tomato_sauce.png").exists());
     }
 }
