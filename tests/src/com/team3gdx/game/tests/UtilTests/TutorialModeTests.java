@@ -13,7 +13,7 @@ import com.team3gdx.game.util.GameMode;
 
 @RunWith(GdxTestRunner.class)
 public class TutorialModeTests {
-    public TutorialMode test;
+    GameMode test = new TutorialMode();
 
     @Test
     public void getModeTimeTest(){
