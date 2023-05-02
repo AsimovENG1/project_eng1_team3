@@ -13,7 +13,7 @@ public class ModeInfo implements GameMode {
         numberOfChefs = gameMode.getNumberOfChefs();
         numberOfCustomersInAWave = gameMode.getNumberOfCustmersInAWave();
         modeTime = gameMode.getModeTime();
-        showTutorial = gameMode.showTutorial();
+        showTutorial = false;
 
         name = gameMode instanceof EndlessMode ? "Endless" : "Scenario";
     }
