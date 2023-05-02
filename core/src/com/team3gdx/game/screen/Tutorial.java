@@ -42,16 +42,26 @@ public class Tutorial {
 				" Control the cooks (using WASD) in the kitchen to gather ingredients. "));
 		stages.add(new PosTextPair(cooks.get(1).pos,
 				" Switch between cooks using tab and shift to go to and fro respectively."));
-		stages.add(new PosTextPair(new Vector2(10 * 64, 11 * 64),
+		stages.add(new PosTextPair(new Vector2(8 * 64, 11 * 64),
 				" Move to different stations: [Ingredient Station] to collect ingredients (e to pickup, q to drop), "));
-		stages.add(new PosTextPair(new Vector2(7 * 64, 11 * 64),
+		stages.add(new PosTextPair(new Vector2(6 * 64, 11 * 64),
 				" [Frying Station] to fry patties and other ingredients (f to flip when ready), "));
-		stages.add(new PosTextPair(new Vector2(6 * 64, 5 * 64), " [Baking station] to bake bread buns, "));
-		stages.add(new PosTextPair(new Vector2(9 * 64, 8 * 64), " [Cutting Station] to cut ingredients,"));
+		stages.add(new PosTextPair(new Vector2(8 * 64, 5 * 64),
+				" [Baking station] to bake bread buns, "));
+		stages.add(new PosTextPair(new Vector2(8 * 64, 8 * 64),
+				" [Cutting Station] to cut ingredients,"));
 		stages.add(new PosTextPair(new Vector2(6 * 64, 8 * 64),
 				" [Preparation station] to form patties and prepare the order... "));
-		stages.add(new PosTextPair(new Vector2(3 * 64, 9 * 64), " to then serve the customer in the shortest time. "));
-		stages.add(new PosTextPair(GameScreen.cook.pos, " Goodluck! "));
+		stages.add(new PosTextPair(new Vector2(3 * 64, 9 * 64),
+				" and serve to the customers to earn money. "));
+		stages.add(new PosTextPair(new Vector2(3 * 64, 9 * 64),
+				" But be careful, if you take too long the customer will leave and you will lose your reputation. "));
+		stages.add(new PosTextPair(new Vector2(6 * 64, 5 * 64),
+				" Use your revenue to buy more cooking stations. "));
+		stages.add(new PosTextPair(new Vector2(9 * 64, 2 * 64),
+				" From time to time, powerups may spawn to help keep the customers happy. "));
+		stages.add(new PosTextPair(GameScreen.cook.pos,
+				" Good luck! "));
 
 		for (PosTextPair stage : stages) {
 			stage.text = " " + stage.text + " ";
