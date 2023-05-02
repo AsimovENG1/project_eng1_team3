@@ -74,6 +74,8 @@ project(":core") {
 
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
+
+        implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.4'
     }
 }
 
@@ -99,6 +101,8 @@ project(":tests") {
 
         implementation "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion"
         implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+
+        implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.4'
 
         testImplementation 'junit:junit:4.+'
         testImplementation "org.mockito:mockito-core:4.+"
