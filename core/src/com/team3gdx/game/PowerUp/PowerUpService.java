@@ -99,8 +99,8 @@ public class PowerUpService {
         MapProperties mapProperties;
 
         do {
-            x = random.nextInt(13) + 3;
-            y = random.nextInt(16);
+            x = random.nextInt(12) + 3;
+            y = random.nextInt(15);
 
             pos.x = x;
             pos.y = y;
