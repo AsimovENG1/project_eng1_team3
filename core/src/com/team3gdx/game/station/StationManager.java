@@ -46,7 +46,9 @@ public class StationManager {
 	 * @param batch - SpriteBatch to render ingredient textures.
 	 */
 	public void handleStations(MainGameClass game, float cookingTime, float constructionCost) {
-		for (Station station : stations.values()) {
+		stations.forEach((__, station) -> {
+			System.out.println("FOREACH"+station);
+
 			if (!station.active()) {
 				return;
 			}
@@ -78,7 +80,7 @@ public class StationManager {
 					}
 				}
 			}
-		}
+		});
 	}
 
 	/**
