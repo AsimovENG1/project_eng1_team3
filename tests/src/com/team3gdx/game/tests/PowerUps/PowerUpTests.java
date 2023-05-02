@@ -54,15 +54,12 @@ public class PowerUpTests  {
 
     @Test
     public void getPowerUpTest(){
-        testService.spawnPowerUp(test1);
-        testService.spawnPowerUp(test2);
-        testService.spawnPowerUp(test3);
-        testService.spawnPowerUp(test4);
-        testService.spawnPowerUp(test5);
+        testService.addActivePowerUp(test1);
+        testService.addActivePowerUp(test2);
+        testService.addActivePowerUp(test3);
+        testService.addActivePowerUp(test4);
+        testService.addActivePowerUp(test5);
         String checkForAll5 = "";
-        for (Vector2 pos : testService.getSpawnedPowerUpsPos()) {
-            testService.interact((int)pos.x,(int)pos.y);
-        }
         for (PowerUp powerUp : testService.getActivePowerUps()) {
 			if (powerUp == test1){
                 checkForAll5 += "x";
