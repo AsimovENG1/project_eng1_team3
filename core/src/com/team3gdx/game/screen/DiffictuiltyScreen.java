@@ -9,6 +9,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.ScreenUtils;
@@ -18,6 +19,7 @@ import com.team3gdx.game.MainGameClass;
 import com.team3gdx.game.util.EndlessMode;
 import com.team3gdx.game.util.GameMode;
 import com.team3gdx.game.util.ScenarioMode;
+import com.team3gdx.game.util.TutorialMode;
 
 public class DiffictuiltyScreen implements Screen{
     final MainGameClass game;
@@ -40,6 +42,7 @@ public class DiffictuiltyScreen implements Screen{
 	Button mediaum;
 	Button hard;
 	Button endless;
+	Button tutorial;
 	Button exit;
 
 	OrthographicCamera camera;
@@ -48,6 +51,7 @@ public class DiffictuiltyScreen implements Screen{
 	Texture EButton;
 	Texture MButton;
 	Texture HButton;
+	Texture tutorialButton;
 	Texture EndButton;
 	Texture exitScreen;
 	Texture background;
@@ -89,28 +93,40 @@ public class DiffictuiltyScreen implements Screen{
 		EButton = new Texture(Gdx.files.internal("uielements/button_easy.png"));
 		MButton = new Texture(Gdx.files.internal("uielements/button_medium.png"));
 		HButton = new Texture(Gdx.files.internal("uielements/button_hard.png"));
+		tutorialButton = new Texture(Gdx.files.internal("uielements/tutorial.png"));
 		EndButton = new Texture(Gdx.files.internal("uielements/button_endless.png"));
 		background = new Texture(Gdx.files.internal("uielements/MainScreenBackground.jpg"));
 		exitScreen = new Texture(Gdx.files.internal("uielements/exitmenu.png"));
 
+		stage = new Stage(viewport, game.batch);
+		Gdx.input.setInputProcessor(stage);
+
+		Table table = new Table();
+		table.setFillParent(true);
+		stage.addActor(table);
+
+		Table leftTable = new Table();
+		Table rightTable = new Table();
+
+		table.add(leftTable).expandY().padRight(10);
+		table.add(rightTable).expandY().padLeft(10);
+
+		tutorial = new Button(new TextureRegionDrawable(tutorialButton));
+
+		tutorial.addListener(new ClickListener() {
+			@Override
+			public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
+				state = STATE.new_game;
+				gameMode = new TutorialMode();
+				super.touchUp(event, x, y, pointer, button);
+			}
+		});
+
+		leftTable.add(tutorial).size(buttonwidth, buttonheight);
+
+		leftTable.row().padTop(10);
+
 		easy = new Button(new TextureRegionDrawable(EButton));
-		mediaum = new Button(new TextureRegionDrawable(MButton));
-		hard = new Button(new TextureRegionDrawable(HButton));
-		endless = new Button(new TextureRegionDrawable(EndButton));
-		exit = new Button(new TextureRegionDrawable(exitScreen));
-
-		exit.setPosition(gameResolutionX * 6 / 10.0f, 4 * gameResolutionY / 5.0f - buttonheight / 2);
-		easy.setPosition(gameResolutionX / 10.0f, 4 * gameResolutionY / 5.0f - buttonheight / 2);
-		mediaum.setPosition(gameResolutionX / 10.0f, 3 * gameResolutionY / 5.0f - buttonheight / 2);
-		hard.setPosition(gameResolutionX / 10.0f, 2 * gameResolutionY / 5.0f - buttonheight / 2);
-		endless.setPosition(gameResolutionX / 10.0f, gameResolutionY / 5.0f - buttonheight / 2);
-
-
-		easy.setSize(buttonwidth, buttonheight);
-		mediaum.setSize(buttonwidth, buttonheight);
-		hard.setSize(buttonwidth, buttonheight);
-		endless.setSize(buttonwidth, buttonheight);
-		exit.setSize(buttonwidth, buttonheight);
 
 		easy.addListener(new ClickListener() {
 			public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
@@ -119,6 +135,13 @@ public class DiffictuiltyScreen implements Screen{
 				super.touchUp(event, x, y, pointer, button);
 			}
 		});
+
+		leftTable.add(easy).size(buttonwidth, buttonheight);
+
+		leftTable.row().padTop(10);
+
+		mediaum = new Button(new TextureRegionDrawable(MButton));
+
 		mediaum.addListener(new ClickListener() {
 			public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
 				state = STATE.new_game;
@@ -126,6 +149,13 @@ public class DiffictuiltyScreen implements Screen{
 				super.touchUp(event, x, y, pointer, button);
 			}
 		});
+
+		leftTable.add(mediaum).size(buttonwidth, buttonheight);
+
+		leftTable.row().padTop(10);
+
+		hard = new Button(new TextureRegionDrawable(HButton));
+
 		hard.addListener(new ClickListener() {
 			public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
 				state = STATE.new_game;
@@ -133,6 +163,13 @@ public class DiffictuiltyScreen implements Screen{
 				super.touchUp(event, x, y, pointer, button);
 			}
 		});
+
+		leftTable.add(hard).size(buttonwidth, buttonheight);
+
+		leftTable.row().padTop(10);
+
+		endless = new Button(new TextureRegionDrawable(EndButton));
+
 		endless.addListener(new ClickListener() {
 			public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
 				state = STATE.new_game;
@@ -140,6 +177,11 @@ public class DiffictuiltyScreen implements Screen{
 				super.touchUp(event, x, y, pointer, button);
 			}
 		});
+
+		leftTable.add(endless).size(buttonwidth, buttonheight);
+
+		exit = new Button(new TextureRegionDrawable(exitScreen));
+
 		exit.addListener(new ClickListener() {
 			public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
 				state = STATE.main;
@@ -147,14 +189,7 @@ public class DiffictuiltyScreen implements Screen{
 			}
 		});
 
-		stage = new Stage(viewport, game.batch);
-		Gdx.input.setInputProcessor(stage);
-
-		stage.addActor(easy);
-		stage.addActor(mediaum);
-		stage.addActor(hard);
-		stage.addActor(endless);
-		stage.addActor(exit);
+		rightTable.add(exit).size(buttonwidth, buttonheight);
 	}
 
 	/**

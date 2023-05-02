@@ -44,10 +44,10 @@ public class Tutorial {
 				" Switch between cooks using tab and shift to go to and fro respectively."));
 		stages.add(new PosTextPair(new Vector2(10 * 64, 11 * 64),
 				" Move to different stations: [Ingredient Station] to collect ingredients (e to pickup, q to drop), "));
-		stages.add(new PosTextPair(new Vector2(7 * 64, 11 * 64),
+		stages.add(new PosTextPair(new Vector2(6 * 64, 11 * 64),
 				" [Frying Station] to fry patties and other ingredients (f to flip when ready), "));
-		stages.add(new PosTextPair(new Vector2(6 * 64, 5 * 64), " [Baking station] to bake bread buns, "));
-		stages.add(new PosTextPair(new Vector2(9 * 64, 8 * 64), " [Cutting Station] to cut ingredients,"));
+		stages.add(new PosTextPair(new Vector2(8 * 64, 5 * 64), " [Baking station] to bake bread buns, "));
+		stages.add(new PosTextPair(new Vector2(8 * 64, 8 * 64), " [Cutting Station] to cut ingredients,"));
 		stages.add(new PosTextPair(new Vector2(6 * 64, 8 * 64),
 				" [Preparation station] to form patties and prepare the order... "));
 		stages.add(new PosTextPair(new Vector2(3 * 64, 9 * 64), " to then serve the customer in the shortest time. "));
