@@ -40,6 +40,7 @@ public class MainScreen implements Screen {
 	Button lb;
 	Button ad;
 	Button eg;
+	Button loadButton;
 
 	Rectangle volSlide;
 	Rectangle volSlideBackgr;
@@ -53,6 +54,7 @@ public class MainScreen implements Screen {
 	Texture vControl;
 	Texture background;
 	Texture startButton;
+	Texture loadGame;
 	Texture leaderBoard;
 	Texture exitGame;
 	Texture audio;
@@ -123,6 +125,7 @@ public class MainScreen implements Screen {
 		vButton = new Texture(Gdx.files.internal("uielements/vButton.jpg"));
 		vControl = new Texture(Gdx.files.internal("uielements/vControl.png"));
 		startButton = new Texture(Gdx.files.internal("uielements/newgame.png"));
+		loadGame = new Texture(Gdx.files.internal("uielements/loadgame.png"));
 		background = new Texture(Gdx.files.internal("uielements/MainScreenBackground.jpg"));
 		leaderBoard = new Texture(Gdx.files.internal("uielements/leaderboard1.png"));
 		audio = new Texture(Gdx.files.internal("uielements/audio.png"));
@@ -141,7 +144,7 @@ public class MainScreen implements Screen {
 		style.font = new BitmapFont();
 
 		sb = new Button(new TextureRegionDrawable(startButton));
-		Button loadButton = new TextButton("Load Game", style);
+		loadButton = new Button (new TextureRegionDrawable(loadGame));
 		lb = new Button(new TextureRegionDrawable(leaderBoard));
 		ad = new Button(new TextureRegionDrawable(audio));
 		eg = new Button(new TextureRegionDrawable(exitGame));
