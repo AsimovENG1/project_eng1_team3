@@ -30,7 +30,7 @@ public class LeaderBoard implements Screen, TextInputListener {
 	OrthographicCamera camera;
 	FitViewport viewport;
 	MainScreen ms;
-	ArrayList<ArrayList<String>> playerData;
+	public ArrayList<ArrayList<String>> playerData;
 	GameMode gameMode;
 
 	/**
