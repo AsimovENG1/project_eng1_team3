@@ -62,4 +62,8 @@ public class PowerUp extends Entity {
 	public boolean isComplete() {
 		return timeElapsed >= duration;
 	}
+
+	public void resetTime() {
+		timeElapsed = 0;
+	}
 }

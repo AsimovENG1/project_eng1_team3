@@ -68,11 +68,21 @@ public class PowerUpService {
             }
         }
 
+        for (Vector2 key : spawnedPowerUps.keySet()) {
+            PowerUp powerUp = spawnedPowerUps.get(key);
+
+            powerUp.addTime(delta);
+
+            if (powerUp.isComplete()) {
+                spawnedPowerUps.remove(key);
+            }
+        }
+
         if (!checkTimer(delta)) {
             return;
         }
 
-        switch (random.nextInt(6)) {
+        switch (random.nextInt(50)) {
             case 1:
                 spawnPowerUp(PowerUps.constructionCostReduce());
                 break;
@@ -129,8 +139,9 @@ public class PowerUpService {
         PowerUp powerUp = spawnedPowerUps.get(pos);
 
         if (control.interact) {
-            activePowerUps.add(powerUp);
             spawnedPowerUps.remove(pos);
+            powerUp.resetTime();
+            activePowerUps.add(powerUp);
         }
 
         return true;
