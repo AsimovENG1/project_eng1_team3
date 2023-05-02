@@ -71,6 +71,7 @@ public class GameScreen implements Screen {
 	Texture BACKTOMAINSCREEN;
 	Texture RESUME;
 	Texture AUDIO;
+	Texture SAVE;
 	Texture audioEdit;
 	Texture vControl;
 	Texture vButton;
@@ -281,13 +282,14 @@ public class GameScreen implements Screen {
 		BACKTOMAINSCREEN = new Texture(Gdx.files.internal("uielements/exitmenu.png"));
 		RESUME = new Texture(Gdx.files.internal("uielements/resume.png"));
 		AUDIO = new Texture(Gdx.files.internal("uielements/audio2.png"));
+		SAVE = new Texture(Gdx.files.internal("uielements/savegame.png"));
 		audioEdit = new Texture(Gdx.files.internal("uielements/background.png"));
 		// ======================================CREATE=BUTTONS==========================================================
 		mn = new Button(new TextureRegionDrawable(MENU));
 		ad = new Button(new TextureRegionDrawable(AUDIO));
 		rs = new Button(new TextureRegionDrawable(RESUME));
 		btms = new Button(new TextureRegionDrawable(BACKTOMAINSCREEN));
-		Button saveButton = new Button(new TextureRegionDrawable(AUDIO));
+		Button saveButton = new Button(new TextureRegionDrawable(SAVE));
 		// ======================================POSITION=AND=SCALE=BUTTONS==============================================
 		mn.setPosition(gameResolutionX / 40.0f, 18 * gameResolutionY / 20.0f);
 		mn.setSize(buttonwidth, buttonheight);
