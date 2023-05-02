@@ -219,6 +219,7 @@ public class LeaderBoard implements Screen, TextInputListener {
 		Gdx.input.setInputProcessor(new InputAdapter() {
 			public boolean keyDown(int key) {
 				if (key == Input.Keys.ESCAPE) {
+					game.font.getData().setScale(0.4f);
 					changeScreenToMain();
 				}
 				return super.keyDown(key);

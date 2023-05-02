@@ -47,8 +47,6 @@ public class StationManager {
 	 */
 	public void handleStations(MainGameClass game, float cookingTime, float constructionCost) {
 		stations.forEach((__, station) -> {
-			System.out.println("FOREACH"+station);
-
 			if (!station.active()) {
 				return;
 			}
@@ -67,7 +65,7 @@ public class StationManager {
 					}
 
 					if (station instanceof CuttingStation && currentIngredient.slicing) {
-						((CuttingStation) station).interact(game, cookingTime * 2);
+						((CuttingStation) station).interact(game, cookingTime * 10);
 						station.interactSound();
 					}
 
